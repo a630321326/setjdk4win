@@ -1,18 +1,9 @@
 ### 说明
 
-- 平时开发需要经常切换JDK版本，可用CMD命令进行快速切换。
-
-- 该脚本中涉及修改JDK、MAVEN环境变量。
-- 我的MAVEN配置文件中配置了使用的JDK编译版本，所以该脚本中同时切换MAVEN。
-
-### JDK&MAVEN历史版本
-
-- jdk：[https://installbuilder.bitrock.com/java/](https://installbuilder.bitrock.com/java/)
-
-  此JDK为ZIP包，下载解压即可使用。
-
-- maven：[https://installbuilder.bitrock.com/java/
+- 平时开发需要经常切换本地JDK版本，可用该CMD命令进行快速切换。
+- 原理说明：修改系统环境变量中`JAVA_HOME`对应的值，因此需要将不同版本的JDK放至不同的文件夹。
+- 我的maven配置文件中配置了编译版本，所以准备了多个maven搭配不同的JDK版本，脚本中会同时切换maven，会更改环境变量`MAVEN_HOME`的值。
 
 ### 使用
 
-修改脚本中JDK与MAVEN路径即可。没有任何技术含量，仅供个人备份。
+提前增加好系统环境变量，修改脚本中不同版本JDK与MAVEN路径即可。没有任何技术含量，仅供个人备份。
