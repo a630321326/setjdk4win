@@ -1,39 +1,40 @@
-@ECHO OFF&PUSHD %~DP0 &TITLE ÉèÖÃJDK»·¾³
-Md "%WinDir%\System32\test_permissions" 2>NUL||(Echo.&Echo ÇëÊ¹ÓÃÓÒ¼ü¡°ÒÔ¹ÜÀíÔ±Éí·ÝÔËÐÐ¡±&&Pause >NUL&&Exit)
+@ECHO OFF&PUSHD %~DP0 &TITLE è®¾ç½®JDKçŽ¯å¢ƒ
+Md "%WinDir%\System32\test_permissions" 2>NUL||(Echo.&Echo è¯·ä½¿ç”¨å³é”®â€œä»¥ç®¡ç†å‘˜èº«ä»½è¿è¡Œâ€&&Pause >NUL&&Exit)
 Rd "%WinDir%\System32\test_permissions" 2>NUL
 SetLocal EnableDelayedExpansion
 
 :Menu
-Echo.&Echo  1. ÉèÖÃJDK1.6Ïà¹Ø»·¾³±äÁ¿
-Echo.&Echo  2. ÉèÖÃJDK1.7Ïà¹Ø»·¾³±äÁ¿
-Echo.&Echo  3. ÉèÖÃJDK1.8Ïà¹Ø»·¾³±äÁ¿
-Echo.&Echo  4. ²é¿´µ±Ç°Ïà¹Ø±äÁ¿ÉèÖÃ
+Echo.&Echo  1. è®¾ç½®JDK1.6ç›¸å…³çŽ¯å¢ƒå˜é‡
+Echo.&Echo  2. è®¾ç½®JDK1.7ç›¸å…³çŽ¯å¢ƒå˜é‡
+Echo.&Echo  3. è®¾ç½®JDK1.8ç›¸å…³çŽ¯å¢ƒå˜é‡
+Echo.&Echo  4. æŸ¥çœ‹å½“å‰ç›¸å…³å˜é‡è®¾ç½®
 Echo.&Echo.
-set /p a=ÊäÈëÊý×Ö°´»Ø³µ£º
+set /p a=è¾“å…¥æ•°å­—æŒ‰å›žè½¦ï¼š
 If Not "%a%"=="" Set a=%a:~0,1%
 If "%a%"=="1" Goto set_1.6
 If "%a%"=="2" Goto set_1.7
 If "%a%"=="3" Goto set_1.8
 If "%a%"=="4" Goto view_current
-Echo.&Echo ÊäÈëÎÞÐ§£¬ÇëÖØÐÂÊäÈë£¡
+Echo.&Echo è¾“å…¥æ— æ•ˆï¼Œè¯·é‡æ–°è¾“å…¥ï¼
 PAUSE >NUL & CLS & GOTO Menu
 
 :set_1.6
 setx JAVA_HOME "C:\Program Files\Java\jdk1.6.0_45" /m
 setx MAVEN_HOME "D:\Develop\apache-maven-3.2.5" /m
-Echo.&Echo ÉèÖÃÍê³É£¬°´ÈÎÒâ¼ü·µ»Ø£¡&PAUSE >NUL 2>NUL & CLS & GOTO MENU
+Echo.&Echo è®¾ç½®å®Œæˆï¼ŒæŒ‰ä»»æ„é”®è¿”å›žï¼&PAUSE >NUL 2>NUL & CLS & GOTO MENU
 
 :set_1.7
 setx JAVA_HOME "C:\Program Files\Java\jdk1.7.0_79" /m
 setx MAVEN_HOME "D:\Develop\apache-maven-3.5.2" /m
-Echo.&Echo ÉèÖÃÍê³É£¬°´ÈÎÒâ¼ü·µ»Ø£¡&PAUSE >NUL 2>NUL & CLS & GOTO MENU
+Echo.&Echo è®¾ç½®å®Œæˆï¼ŒæŒ‰ä»»æ„é”®è¿”å›žï¼&PAUSE >NUL 2>NUL & CLS & GOTO MENU
 
 :set_1.8
 setx JAVA_HOME "C:\Program Files\Java\jdk1.8.0_171" /m
 setx MAVEN_HOME "D:\Develop\apache-maven-3.6.0" /m
-Echo.&Echo ÉèÖÃÍê³É£¬°´ÈÎÒâ¼ü·µ»Ø£¡&PAUSE >NUL 2>NUL & CLS & GOTO MENU
+Echo.&Echo è®¾ç½®å®Œæˆï¼ŒæŒ‰ä»»æ„é”®è¿”å›žï¼&PAUSE >NUL 2>NUL & CLS & GOTO MENU
 
 :view_current
 Echo.&Echo %MAVEN_HOME%
 Echo.&Echo %JAVA_HOME%
-Echo.&Echo °´ÈÎÒâ¼ü·µ»Ø£¡&PAUSE >NUL 2>NUL & CLS & GOTO MENU
+Echo.&Echo æŒ‰ä»»æ„é”®è¿”å›žï¼&PAUSE >NUL 2>NUL & CLS & GOTO MENU
+
